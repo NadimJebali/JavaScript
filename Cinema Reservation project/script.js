@@ -35,7 +35,11 @@ async function movieListDB() {
 }
 
 showroom.addEventListener("click", (e) => {
-  if (
+  
+  if (!e.target.classList.contains("seat")){
+    alert("This seat is already occupied");
+    return;
+  }else if (
     e.target.classList.contains("selected") &&
     !e.target.classList.contains("occupied")
   ) {
@@ -44,10 +48,7 @@ showroom.addEventListener("click", (e) => {
     count.innerText = selectedSeats;
     totalTicketsPrice = parseInt(totalTicketsPrice) - parseInt(ticketPrice);
     total.innerText = totalTicketsPrice;
-  } else if (e.target.classList.contains("occupied")){
-    alert("This seat is already occupied");
-    return;
-  }else{
+  } else{
     e.target.classList.toggle("selected");
     let selectedSeats = document.querySelectorAll(".seat.selected").length;
     count.innerText = selectedSeats;
