@@ -23,11 +23,11 @@
                     },
                     {
                         "id": 2,
-                        "status": "available"
+                        "status": "occupied"
                     },
                     {
                         "id": 3,
-                        "status": "available"
+                        "status": "occupied"
                     },
                     {
                         "id": 4,
@@ -47,7 +47,7 @@
                     },
                     {
                         "id": 8,
-                        "status": "available"
+                        "status": "occupied"
                     },
                     {
                         "id": 9,
