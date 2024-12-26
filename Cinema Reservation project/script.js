@@ -53,15 +53,15 @@ showroom.addEventListener("click", (e) => {
   }
 });
 
-function changeStatus(Id, id, status) {
-  fetch(`http://localhost:3000/cinema/showroom/${id}/seat/${Id}`, {
-    method: "PUT",
+function changeStatus(showroomId, seatId, seatStatus) {
+  fetch(`http://localhost:3000/cinema/showroom/${showroomId}/seat/${seatId}`, {
+    method: "PATCH",
+    body: JSON.stringify({
+      status: seatStatus,
+    }),
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      status: status,
-    }),
   });
 }
 
